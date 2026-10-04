@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Log Video Player</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#202526"/>
+      <stop offset="1" stop-color="#0c0f10"/>
+    </linearGradient>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6abdc7"/>
+      <stop offset="0.52" stop-color="#e3ae73"/>
+      <stop offset="1" stop-color="#df7056"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="url(#bg)" stroke="#fff" stroke-opacity=".16"/>
+  <path d="M19 16.5 45 32 19 47.5Z" fill="#8e9290"/>
+  <path d="M32 24.25 45 32 32 39.75Z" fill="url(#spectrum)"/>
+  <path d="M32 24.25v15.5" fill="none" stroke="#f7f4ec" stroke-opacity=".8" stroke-width="1"/>
+</svg>

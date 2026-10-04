@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log Video Player for Mac — Automatic Log to Rec.709 Playback</title>
+  <meta name="description" content="Double-click Log footage and watch it in normal Rec.709 colour. Precise scrubbing, corrected hover frames and pro playback controls are available in version 1.1.">
+  <meta name="theme-color" content="#090b0c">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://autonomath.github.io/log-video-player/">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Log Video Player">
+  <meta property="og:title" content="Log Video Player — Flat footage, normal colour.">
+  <meta property="og:description" content="Automatic Log-to-Rec.709 playback. Precise scrubbing and pro transport controls are available in version 1.1.">
+  <meta property="og:url" content="https://autonomath.github.io/log-video-player/">
+  <meta property="og:image" content="https://autonomath.github.io/log-video-player/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Log Video Player — Flat footage, normal colour">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Log Video Player for Mac">
+  <meta name="twitter:description" content="Automatic Log-to-Rec.709 playback. Version 1.1 brings precise scrubbing and pro transport controls.">
+  <meta name="twitter:image" content="https://autonomath.github.io/log-video-player/assets/social-card.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Log Video Player",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Video Player",
+    "operatingSystem": "macOS 14 or later",
+    "description": "A native Mac video player with automatic Log-to-Rec.709 viewing transforms, live picture adjustments and camera-aware profile selection.",
+    "url": "https://autonomath.github.io/log-video-player/",
+    "downloadUrl": "https://apps.apple.com/app/log-video-player/id6794441589",
+    "softwareVersion": "1.1",
+    "datePublished": "2026-08-03",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD",
+      "url": "https://apps.apple.com/app/log-video-player/id6794441589",
+      "availability": "https://schema.org/InStock"
+    },
+    "featureList": [
+      "Automatic Log profile detection",
+      "Built-in ACES-based Rec.709 viewing transforms",
+      "Live brightness, contrast, saturation, temperature and tint adjustments",
+      "Searchable camera profile picker during playback",
+      "Camera-generation-aware DJI profile selection",
+      "Non-destructive local processing",
+      "Before and after comparison",
+      "One-time compatible .cube LUT imports"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Log Video Player home">
+      <img src="assets/mark.svg" alt="" width="34" height="34">
+      <span>Log Video Player</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#version-1-1">1.1 features</a>
+      <a href="#compatibility">Compatibility</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <a class="release-chip" href="https://apps.apple.com/app/log-video-player/id6794441589" rel="external" aria-label="Download Log Video Player from the Mac App Store"><span aria-hidden="true"></span> Available now</a>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A purpose-built player for camera Log</p>
+        <h1 id="hero-title">Flat footage.<br><em>Normal colour.</em></h1>
+        <p class="hero-lede">Double-click Log footage and watch it the way it was meant to look—automatically, in real time, without creating a project or changing the original.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://apps.apple.com/app/log-video-player/id6794441589" rel="external" aria-label="Download Log Video Player free from the Mac App Store">
+            Download free
+            <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 5l4 4-4 4"/></svg>
+          </a>
+          <span class="availability">Mac App Store · Version 1.1<br>Apple silicon · macOS 14+</span>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Playback</dt><dd>Real time</dd></div>
+          <div><dt>Files</dt><dd>Untouched</dd></div>
+          <div><dt>Data</dt><dd>Stays local</dd></div>
+        </dl>
+      </div>
+
+      <div class="viewer-wrap" data-reveal>
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="viewer" style="--reveal: 42%;">
+          <div class="viewer-titlebar">
+            <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="viewer-filename">SYNTHETIC_LOG.MP4</span>
+            <span class="viewer-profile">AUTO</span>
+          </div>
+          <div class="comparison" id="comparison-frame">
+            <img class="scene scene-colour" src="assets/hero-frame.svg" alt="Aerial coastal landscape shown with natural Rec.709 colour">
+            <div class="scene-before" aria-hidden="true">
+              <img class="scene scene-log" src="assets/hero-frame.svg" alt="">
+            </div>
+            <span class="frame-label frame-label-before">D-Log</span>
+            <span class="frame-label frame-label-after">Rec.709</span>
+            <span class="reveal-line" aria-hidden="true"><i></i></span>
+            <input class="reveal-control" type="range" min="8" max="92" value="42" aria-label="Compare flat Log with corrected Rec.709 colour" aria-controls="comparison-frame">
+          </div>
+          <div class="viewer-controls" aria-hidden="true">
+            <svg class="play-icon" viewBox="0 0 20 20"><path d="M6.5 4.5v11l9-5.5z"/></svg>
+            <span class="timecode">00:14</span>
+            <span class="timeline"><i></i></span>
+            <span class="timecode">01:08</span>
+            <span class="speaker-icon">◖))</span>
+            <span class="fullscreen-icon">⌗</span>
+          </div>
+        </div>
+        <p class="compare-hint"><span aria-hidden="true">←</span> Drag to compare <span aria-hidden="true">→</span></p>
+      </div>
+    </section>
+
+    <aside class="update-banner shell" aria-label="Version 1.1 features">
+      <a href="#version-1-1">
+        <span class="update-label">Available in 1.1</span>
+        <strong>Precision playback controls</strong>
+        <span class="update-summary">Corrected scrubbing · Hover frames · J/K/L transport</span>
+        <span class="update-arrow" aria-hidden="true">↓</span>
+      </a>
+    </aside>
+
+    <section class="promise-strip" aria-label="Product principles">
+      <div class="shell promise-grid">
+        <p><span>01</span>No projects</p>
+        <p><span>02</span>No exports</p>
+        <p><span>03</span>No uploads</p>
+        <p><span>04</span>Originals untouched</p>
+      </div>
+    </section>
+
+    <section class="steps shell section" id="how-it-works" aria-labelledby="steps-title">
+      <div class="section-heading" data-animate>
+        <p class="eyebrow">One job, done well</p>
+        <h2 id="steps-title">Open. Recognize. Watch.</h2>
+        <p>Everything between your file and normal colour happens during playback.</p>
+      </div>
+      <ol class="step-list">
+        <li data-animate>
+          <span class="step-number">01</span>
+          <div class="step-icon" aria-hidden="true">
+            <svg viewBox="0 0 42 42"><path d="M8 13h10l3 4h13v16H8z"/><path d="M8 17h26"/></svg>
+          </div>
+          <h3>Open the video</h3>
+          <p>After a one-time Finder setup, double-click a video—or drag it onto the app or choose Open. MP4, MOV and M4V are welcome.</p>
+        </li>
+        <li data-animate>
+          <span class="step-number">02</span>
+          <div class="step-icon" aria-hidden="true">
+            <svg viewBox="0 0 42 42"><path d="M21 7v6M21 29v6M7 21h6M29 21h6"/><circle cx="21" cy="21" r="8"/><path d="M15.5 26.5l11-11"/></svg>
+          </div>
+          <h3>Profile detected</h3>
+          <p>Camera metadata, codec and bit depth identify the Log profile. The active conversion stays visible.</p>
+        </li>
+        <li data-animate>
+          <span class="step-number">03</span>
+          <div class="step-icon step-icon-colour" aria-hidden="true">
+            <svg viewBox="0 0 42 42"><path d="M10 8h22v26H10z"/><path d="M10 28l7-8 5 5 5-7 5 6"/><circle cx="17" cy="15" r="3"/></svg>
+          </div>
+          <h3>Normal colour, instantly</h3>
+          <p>A matching built-in ACES-based transform—or your installed compatible LUT—is applied in real time. The video file itself is never rewritten.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="transport-preview section" id="version-1-1" aria-labelledby="transport-title">
+      <div class="shell">
+        <div class="transport-heading" data-animate>
+          <div>
+            <p class="eyebrow">Available in version 1.1</p>
+            <h2 id="transport-title">Find the frame.<br><em>Keep the colour.</em></h2>
+          </div>
+          <div class="transport-intro">
+            <p>Version 1.1 turns Log Video Player into a faster review tool—without turning it into an editor. These controls are available now in the free 1.1 app.</p>
+            <span>Pro Playback Controls</span>
+          </div>
+        </div>
+
+        <div class="transport-stage" data-animate>
+          <div class="transport-canvas" aria-hidden="true">
+            <div class="transport-frame-art"></div>
+            <div class="hover-frame">
+              <div></div>
+              <span>00:37.18</span>
+            </div>
+            <div class="transport-overlay">
+              <div class="transport-time"><span>00:37</span><span>−01:31</span></div>
+              <div class="precision-timeline">
+                <i class="buffered-range"></i>
+                <i class="elapsed-range"></i>
+                <i class="timeline-cursor"></i>
+              </div>
+              <div class="transport-toolbar">
+                <div class="shuttle-controls">
+                  <span class="mini-key">J</span>
+                  <span class="pause-mark">❚❚</span>
+                  <span class="mini-key">L</span>
+                </div>
+                <div class="rate-control"><span>0.25×</span><span>0.5×</span><strong>1×</strong><span>1.5×</span><span>2×</span><span>4×</span></div>
+                <span class="colour-state"><i></i> Normal colour</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="transport-proof">
+            <p class="proof-index">1.1 / 01</p>
+            <h3>Scrub what you’re actually watching.</h3>
+            <p>Drag the new timeline and the playhead follows immediately. Hover to see the exact frame with the active camera transform, LUT and picture adjustments already applied.</p>
+            <dl>
+              <div><dt>During a drag</dt><dd>Continuous corrected frames</dd></div>
+              <div><dt>At release</dt><dd>Frame-accurate final position</dd></div>
+              <div><dt>On disk</dt><dd>No thumbnail cache or sidecar</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="transport-grid">
+          <article data-animate>
+            <p class="proof-index">1.1 / 02</p>
+            <h3>Review at your pace.</h3>
+            <p>Choose 0.25×, 0.5×, 1×, 1.5×, 2× or 4×. The selected forward speed stays ready when you pause and resume.</p>
+            <div class="speed-scale" aria-label="Playback speeds available in version 1.1">
+              <span>0.25×</span><span>0.5×</span><strong>1×</strong><span>1.5×</span><span>2×</span><span>4×</span>
+            </div>
+          </article>
+
+          <article data-animate>
+            <p class="proof-index">1.1 / 03</p>
+            <h3>Transport under your fingers.</h3>
+            <p>Use familiar review shortcuts without reaching for the controls.</p>
+            <div class="shortcut-map">
+              <div><span><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd></span><strong>Reverse · Pause · Forward</strong></div>
+              <div><span><kbd>←</kbd><kbd>→</kbd></span><strong>Jump 10 seconds</strong></div>
+              <div><span><kbd>,</kbd><kbd>.</kbd></span><strong>Previous · Next frame</strong></div>
+              <div><span><kbd>Space</kbd></span><strong>Play · Pause</strong></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="transport-footnote">The original video remains untouched. Preview frames stay in memory only and follow Original / Normal Colour mode.</p>
+      </div>
+    </section>
+
+    <section class="feature-section section">
+      <div class="shell">
+        <div class="section-heading narrow" data-animate>
+          <p class="eyebrow">Built for viewing—not editing</p>
+          <h2>A lighter way to review camera footage.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature feature-adjust" id="picture-controls" data-animate>
+            <div class="feature-copy">
+              <span class="feature-kicker">New · Live picture controls</span>
+              <h3>Fine-tune the view while it plays.</h3>
+              <p>Adjust brightness, contrast, saturation, temperature and tint after Log conversion. Reset any control—or all five—instantly. The original file stays untouched.</p>
+            </div>
+            <div class="adjustment-panel" aria-hidden="true">
+              <div class="adjustment-heading"><strong>Picture adjustments</strong><span>Viewer only</span></div>
+              <div class="adjustment-row"><div><span>Brightness</span><b>+15%</b></div><i class="adjustment-meter" style="--value: 62%"><em></em></i></div>
+              <div class="adjustment-row"><div><span>Contrast</span><b>+10%</b></div><i class="adjustment-meter" style="--value: 58%"><em></em></i></div>
+              <div class="adjustment-row"><div><span>Saturation</span><b>+8%</b></div><i class="adjustment-meter adjustment-meter-spectrum" style="--value: 56%"><em></em></i></div>
+              <div class="adjustment-row"><div><span>Temperature</span><b>+10</b></div><i class="adjustment-meter adjustment-meter-temperature" style="--value: 57%"><em></em></i></div>
+              <div class="adjustment-row"><div><span>Tint</span><b>−5</b></div><i class="adjustment-meter adjustment-meter-tint" style="--value: 47%"><em></em></i></div>
+              <div class="adjustment-footer"><span>Applied after Log conversion</span><strong>Reset All</strong></div>
+            </div>
+          </article>
+
+          <article class="feature feature-detect" data-animate>
+            <div class="feature-copy">
+              <span class="feature-kicker">Automatic</span>
+              <h3>It knows what it’s looking at.</h3>
+              <p>Log Video Player inspects standard colour metadata and known camera signatures, then explains exactly what it applied. Search and switch profiles without stopping playback.</p>
+            </div>
+            <div class="profile-card" aria-label="Example detected profile">
+              <div><span class="status-dot"></span><strong>Profile detected</strong><small>Assumed · Camera signature</small></div>
+              <p>DJI Mavic 3</p>
+              <p>D-Log <span>→</span> Rec.709</p>
+              <dl><div><dt>Codec</dt><dd>HEVC 10-bit</dd></div><div><dt>Playback</dt><dd>Hardware</dd></div></dl>
+            </div>
+          </article>
+
+          <article class="feature feature-private" data-animate>
+            <div class="privacy-rings" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
+            <div class="feature-copy">
+              <span class="feature-kicker">Private by design</span>
+              <h3>Your footage never leaves your Mac.</h3>
+              <p>No account, cloud processing, analytics or advertising. Playback is local, and your originals remain byte-for-byte untouched.</p>
+            </div>
+          </article>
+
+          <article class="feature feature-compare" data-animate>
+            <div class="mini-compare" aria-hidden="true">
+              <img src="assets/hero-frame.svg" alt="">
+              <span></span>
+            </div>
+            <div class="feature-copy">
+              <span class="feature-kicker">Visible control</span>
+              <h3>Before and after, one key away.</h3>
+              <p>Toggle the transform at any time. When metadata is ambiguous, choose a profile once and the app remembers the camera signature.</p>
+            </div>
+          </article>
+
+          <article class="feature feature-lut" data-animate>
+            <div class="cube-art" aria-hidden="true">
+              <span class="cube-face cube-front"></span>
+              <span class="cube-face cube-top"></span>
+              <span class="cube-face cube-side"></span>
+            </div>
+            <div class="feature-copy">
+              <span class="feature-kicker">Flexible when needed</span>
+              <h3>Your own LUTs still fit.</h3>
+              <p>Import a standard .cube LUT for a camera profile or a personal viewing look—without turning playback into a colour-grading session.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="compatibility shell section" id="compatibility" aria-labelledby="compatibility-title">
+      <div class="compatibility-intro" data-animate>
+        <p class="eyebrow">Camera compatibility</p>
+        <h2 id="compatibility-title">The Log formats creators already shoot.</h2>
+        <p>Built-in ACES-based Rec.709 viewing transforms cover the profiles marked below. Additional profiles use a one-time compatible LUT import.</p>
+      </div>
+      <div class="format-list" data-animate>
+        <article><span>DJI</span><p>Full D-Log · built in<br>Camera-specific D-Log / D-Log M · verified LUT import</p></article>
+        <article><span>Apple</span><p>Apple Log · built in<br>Apple Log 2 · LUT import</p></article>
+        <article><span>Sony</span><p>S-Log2 / S-Log3 · built in</p></article>
+        <article><span>Canon</span><p>Canon Log · LUT import<br>Log 2 / Log 3 · built in</p></article>
+        <article><span>Panasonic</span><p>V-Log / V-Gamut · built in</p></article>
+        <article><span>GoPro</span><p>GoPro Log · LUT import</p></article>
+      </div>
+      <p class="compatibility-note">DJI profiles distinguish the Mavic 3 generation, Mavic 2 Pro / Air 2S, Mavic 4 Pro / Mini 5 Pro, Osmo Action 6, Phantom and Zenmuse families instead of treating every D-Log M file as identical. Built-in transforms are ACES-based viewing transforms; supported manufacturer profiles use a one-time verified .cube LUT import. Ambiguous files remain easy to choose manually. Rec.709, HLG and PQ footage passes through without an unnecessary Log transform.</p>
+    </section>
+
+    <section class="not-editor section" aria-labelledby="not-editor-title">
+      <div class="shell not-editor-grid">
+        <div data-animate>
+          <p class="eyebrow">Deliberately focused</p>
+          <h2 id="not-editor-title">Not another editor.</h2>
+          <p class="editor-lede">Editors are excellent for making films. Log Video Player is for the moment before that—when you simply need to see what you captured.</p>
+        </div>
+        <div class="does-list" data-animate>
+          <div><span aria-hidden="true">✓</span><p><strong>It plays</strong>Log footage in normal colour</p></div>
+          <div><span aria-hidden="true">✓</span><p><strong>It identifies</strong>The active camera transform</p></div>
+          <div><span aria-hidden="true">✓</span><p><strong>It preserves</strong>Every byte of the original</p></div>
+          <div class="does-not"><span aria-hidden="true">×</span><p><strong>It does not</strong>Edit, grade, render or export</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing shell section" aria-labelledby="closing-title">
+      <div class="closing-card" data-animate>
+        <div class="spectral-slit" aria-hidden="true"></div>
+        <p class="eyebrow">Log Video Player for Mac</p>
+        <h2 id="closing-title">See the shot.<br>Skip the setup.</h2>
+        <p>Native, private and free on the Mac App Store.</p>
+        <a class="button button-ghost" href="https://apps.apple.com/app/log-video-player/id6794441589" rel="external" aria-label="Download Log Video Player free from the Mac App Store">Download free <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/mark.svg" alt="" width="30" height="30">
+          <span>Log Video Player</span>
+        </a>
+        <p>Flat footage, normal colour.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#version-1-1">1.1 features</a>
+        <a href="#compatibility">Compatibility</a>
+        <a href="https://apps.apple.com/app/log-video-player/id6794441589" rel="external">Mac App Store</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <p class="legal">Independent software. Not affiliated with any camera manufacturer.<br>© <span data-year>2026</span> Log Video Player.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

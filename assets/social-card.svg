@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Log Video Player for Mac</title>
+  <desc id="desc">Flat footage, normal colour. Automatic Log to Rec.709 playback with live picture controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080a0b"/>
+      <stop offset="1" stop-color="#15191a"/>
+    </linearGradient>
+    <linearGradient id="type" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ecede8"/>
+      <stop offset=".55" stop-color="#79c1c6"/>
+      <stop offset="1" stop-color="#ee9f67"/>
+    </linearGradient>
+    <clipPath id="rightHalf"><rect x="840" y="0" width="360" height="630"/></clipPath>
+    <filter id="mono"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="linear" slope=".72" intercept=".12"/><feFuncG type="linear" slope=".72" intercept=".12"/><feFuncB type="linear" slope=".72" intercept=".12"/></feComponentTransfer></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="978" cy="120" r="330" fill="#5da2a5" opacity=".07"/>
+  <circle cx="1050" cy="560" r="390" fill="#e79861" opacity=".05"/>
+  <g transform="translate(78 70)">
+    <rect width="54" height="54" rx="13" fill="#1b2021" stroke="#fff" stroke-opacity=".15"/>
+    <path d="m16 13 25 14-25 14Z" fill="#858a87"/>
+    <path d="m28 19.7 13 7.3-13 7.3Z" fill="url(#type)"/>
+    <text x="70" y="35" fill="#f2f1ec" font-family="Avenir Next, sans-serif" font-size="25" font-weight="600">Log Video Player</text>
+  </g>
+  <g transform="translate(82 132)">
+    <rect width="190" height="34" rx="17" fill="#7bc59c" fill-opacity=".08" stroke="#7bc59c" stroke-opacity=".35"/>
+    <circle cx="18" cy="17" r="4" fill="#7bc59c"/>
+    <text x="32" y="22" fill="#a9d9bd" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" letter-spacing="1.3">FREE · AVAILABLE NOW</text>
+  </g>
+  <text x="78" y="260" fill="#f4f2eb" font-family="Iowan Old Style, Baskerville, serif" font-size="88" letter-spacing="-4">Flat footage.</text>
+  <text x="78" y="350" fill="url(#type)" font-family="Iowan Old Style, Baskerville, serif" font-size="88" font-style="italic" letter-spacing="-4">Normal colour.</text>
+  <text x="84" y="416" fill="#aaa9a3" font-family="Avenir Next, sans-serif" font-size="23">Log → Rec.709 playback with live picture controls.</text>
+  <g transform="translate(820 105)">
+    <rect width="310" height="388" rx="11" fill="#16191b" stroke="#fff" stroke-opacity=".17"/>
+    <image href="hero-frame.svg" x="13" y="42" width="284" height="268" preserveAspectRatio="xMidYMid slice"/>
+    <image href="hero-frame.svg" x="13" y="42" width="142" height="268" preserveAspectRatio="xMinYMid slice" filter="url(#mono)"/>
+    <line x1="155" y1="42" x2="155" y2="310" stroke="#fff" stroke-opacity=".9"/>
+    <circle cx="155" cy="176" r="13" fill="#0b0d0e" stroke="#fff" stroke-opacity=".8"/>
+    <circle cx="30" cy="22" r="4" fill="#d06b5d"/><circle cx="43" cy="22" r="4" fill="#cda75b"/><circle cx="56" cy="22" r="4" fill="#68af78"/>
+    <rect x="28" y="341" width="254" height="3" rx="2" fill="#3d4141"/>
+    <rect x="28" y="341" width="105" height="3" rx="2" fill="url(#type)"/>
+  </g>
+  <text x="83" y="553" fill="#737774" font-family="Avenir Next, sans-serif" font-size="16" letter-spacing="2">MAC APP STORE · LOCAL · PRIVATE · NON-DESTRUCTIVE</text>
+</svg>

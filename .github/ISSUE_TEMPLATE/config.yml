@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Privacy policy
+    url: https://autonomath.github.io/log-video-player/privacy.html
+    about: Learn what Log Video Player does—and does not—collect.

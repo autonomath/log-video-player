@@ -1,0 +1,16 @@
+{
+  "name": "Log Video Player",
+  "short_name": "Log Video Player",
+  "description": "Automatic Log-to-Rec.709 playback with live picture controls for Mac.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090b0c",
+  "theme_color": "#090b0c",
+  "icons": [
+    {
+      "src": "assets/mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

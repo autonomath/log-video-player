@@ -1,0 +1,64 @@
+name: Playback or profile problem
+description: Report a Log Video Player playback, detection or display issue.
+title: "[Support] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Log Video Player. Please do not upload private footage, private file paths or serial numbers.
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: "1.0 (100)"
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac and macOS
+      description: Include the Mac model and macOS version.
+      placeholder: "MacBook Pro (M2 Pro), macOS 15.5"
+    validations:
+      required: true
+  - type: input
+    id: camera
+    attributes:
+      label: Camera and recording profile
+      placeholder: "DJI Mavic 3, D-Log"
+    validations:
+      required: true
+  - type: input
+    id: format
+    attributes:
+      label: Video format
+      description: Include container, codec, bit depth, resolution and frame rate if known.
+      placeholder: "MP4, HEVC 10-bit, 3840×2160, 59.94 fps"
+  - type: dropdown
+    id: detected-profile
+    attributes:
+      label: Profile shown by the app
+      options:
+        - Correct profile
+        - Incorrect profile
+        - Assumed
+        - Rec.709 passthrough
+        - No profile shown
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened?
+      description: Describe what you expected, what appeared, and the shortest steps that reproduce it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private footage, private file paths and serial numbers from this report.
+          required: true
